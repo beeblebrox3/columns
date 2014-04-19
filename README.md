@@ -23,13 +23,13 @@ Add the assets to your page:
 
 Create a div to put the columns inside. Must be a single element.
 
-```
+```html
 <div id="render-columns"></div>
 ```
 
 In your js code, you have to call the Columns method and pass some arguments.
 
-```
+```javascript
 var myColumns = $.Columns(options);
 ```
 
@@ -37,8 +37,8 @@ var myColumns = $.Columns(options);
 #### List of available options
 
 option | default value | required | description
---- | --- | ---
-container | | yes | Pass the selector to element where render columns.
+--- | --- | --- | ---
+container | `''` | yes | Pass the selector to element where render columns.
 checkboxes | `false` | no | If true, add a checkbox before the item label. You can use to apply batch actions
 radio | `false` | no | Works similar to checkboxes. You can use only one: or checkbox or radio, not both.
 activeClass | `'active'` | no | Define the class to active elements (li).
@@ -53,7 +53,7 @@ data | `null` | no | The data to be displayed. If you want to pass the data late
 #### Data format
 You need to pass a array of objects. Look the example above:
 
-```
+```javascript
 var data = [{
     id: 'home',
     label: 'home',
@@ -96,7 +96,7 @@ Each element is a li. You can create a hierarchy with the child property. In the
 method | arguments | description
 --- | --- | ---
 loadData | `array data` | If you don't pass the data in options, you can use this method
-getActives | | Returns the active li's. 
-getSelected | | Returns the selected items (checkbox or radio)
-render | | build the ul's and li's and append to container
-getData | | returns the current data 
+getActives | `null` | Returns the active li's. 
+getSelected | `null` | Returns the selected items (checkbox or radio)
+render | `null` | build the ul's and li's and append to container
+getData | `null` | returns the current data 
