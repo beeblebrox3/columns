@@ -1,0 +1,64 @@
+/*
+ * Columns - jQuery Plugin
+ *
+ * Author :: LuQue - http://www.luque.cc/
+ *
+ * Version: 1.0 (2013/06/06)
+ *
+ */
+
+.columns-container {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ccc;
+    overflow: auto;
+    white-space: nowrap !important;
+    position: relative;
+}
+    .columns-container ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+        .columns-container li {
+            padding: 0;
+            margin: 0;
+        }
+    .columns-level{
+        border-right: 1px solid;
+        display: none;
+    }
+        .columns-level.active, .columns-level.active .active {
+            display: block;
+        }
+            .columns-level.active {
+                max-width: 500px;
+                min-width: 200px;
+                height: 300px;
+                display: table-cell;
+                float: none !important;
+            }
+        .columns-level li {
+            padding: 5px;
+            cursor: pointer;
+            position: relative;
+        }
+        .columns-level li:hover {
+            background: #f2f2f2;
+        }
+        .columns-level li.active {
+            background: #AAA;
+            color: white;
+        }
+        .columns-edit-item {
+            color: red;
+            position: absolute;
+            right: 2px;
+            opacity: 0.1;
+        }
+        .columns-level li:hover .columns-edit-item {
+            opacity: .5;
+        }
+        .columns-edit-item:hover {
+            opacity: 1;
+        }
